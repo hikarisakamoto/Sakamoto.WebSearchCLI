@@ -2,10 +2,12 @@
 
 var url = "https://www.google.com"; // The URL to open
 
+var browser = string.Empty;
+
 var psi = new ProcessStartInfo
 {
     FileName = "powershell.exe",
-    Arguments = $"-Command \"Start-Process msedge '{url}'\"",
+    Arguments = $"-Command \"Start-Process {browser} '{url}'\"",
     UseShellExecute = false,
     CreateNoWindow = true // Prevents opening an additional PowerShell window
 };
